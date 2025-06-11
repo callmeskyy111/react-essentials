@@ -4,6 +4,14 @@ import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 
 function App() {
+
+  function handleSelect(selectedBtn) {
+    // selectedBtn => 'components' / 'jsx'/ 'props' / 'state'
+    // if(){} check
+    console.log(`EXAMPLE selected: ${selectedBtn} ✅`);
+  }
+
+  console.log(`App Component rendering.. ☑️`)
   return (
     <div>
       <Header />
@@ -34,12 +42,16 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            {/* Children Props. */}
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props.</TabButton>
-            <TabButton>State</TabButton>
+            {/* CHILDREN PROPS. */}
+            <TabButton onSelect={() => handleSelect("components")}>
+              Components
+            </TabButton>
+            {/* EVENTS */}
+            <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect('props')}>Props.</TabButton>
+            <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
+          {/* DYNAMIC CONTENT */}
         </section>
       </main>
     </div>

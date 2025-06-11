@@ -1,9 +1,8 @@
-import React from "react";
-
-function TabButton({ children }) {
+function TabButton({ children, onSelect }) {
+    console.log(`TabContent Component rendering.. ✔️`);
   return (
     <li>
-      <button>{children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 }
