@@ -1,8 +1,12 @@
-function TabButton({ children, onSelect }) {
-    console.log(`TabContent Component rendering.. ✔️`);
+function TabButton({ children, onSelect, isSelected }) {
+  console.log(`TabContent Component rendering.. ✔️`);
   return (
     <li>
-      <button onClick={onSelect}>{children}</button>
+      <button
+        className={isSelected ? 'active':''}
+        onClick={onSelect}>
+        {children}
+      </button>
     </li>
   );
 }
