@@ -2,6 +2,7 @@ import CoreConcept from "./CoreConcept";
 import { CORE_CONCEPTS } from "../data.updated";
 
 function CoreConcepts() {
+  console.log(`CoreConcepts component rendering.. ☑️`);
   return (
     <section id="core-concepts">
       <h2>Core Concepts</h2>
